@@ -1,4 +1,9 @@
-{
+{ 
+  "homepage": "https://juanikmet.github.io/react-flex",
+  "scripts":{
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build" 
+}  ,
   "name": "entrega-react",
   "private": true,
   "version": "0.0.0",
