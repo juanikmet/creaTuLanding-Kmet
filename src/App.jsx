@@ -1,16 +1,27 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import NavBar from './components/NavBar/NavBar'
-import ItemListContainer from './components/ItemListContainer/ItemListContainer'
+import { useEffect, useState } from 'react';
+import './App.css';
+import NavBar from './components/NavBar/NavBar';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import fetchData from './fetchData';
 
 function App() {
+
+
+const [productos, setProducts] = useState([]);  
+
+useEffect(() => {
+  fetchData()
+      .then(response => {
+        setProducts(response);
+      })
+      .catch(err => console.error(err));
+      
+},[])
 
   return (
     <>
       <NavBar />
-      <ItemListContainer greeting={'Hola'} />
+      <ItemListContainer productos={productos} />
     </>
   )
 };

@@ -5,7 +5,7 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
     "./src/App.jsx",
     "./src/main.jsx",
-    ".src/components/**/*.{jsx}"
+    ".src/components/**/*.jsx"
 
   ],
   theme: {
