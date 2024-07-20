@@ -8,7 +8,9 @@ const ItemListContainer = ({ productos }) => {
                 productos.length === 0 ?
                     <p>Cargando...</p>
                     :
-                    <ItemList productos={productos} />
+                    <div className="container mx-auto p-4" >
+                        <ItemList productos={productos} />
+                    </div>
             }
         </>
     );
