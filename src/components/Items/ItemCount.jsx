@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 
-export const ItemCount = ({stock, initial, onAdd}) => {
+export const ItemCount = ({id, stock, initial, onAdd, addToCart}) => {
 
     const [quantity, setQuantity] = useState(initial);
 
@@ -26,7 +26,7 @@ export const ItemCount = ({stock, initial, onAdd}) => {
             <button className='bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-r' onClick={increment}>+</button>
         </div>
         <div className='mt-4' >
-        <button className="bg-blue-500 hover:bg-blue-700 text-white px-4 py-2 rounded w-full" onClick={() => onAdd(quantity)} disabled={!stock}>Agregar al carrito</button>
+        <button className="bg-blue-500 hover:bg-blue-700 text-white px-4 py-2 rounded w-full" onClick={() => addToCart(id)} disabled={!stock}>Agregar al carrito</button>
         </div>
     </div>
   );

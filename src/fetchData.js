@@ -1,4 +1,4 @@
-const productos = [
+const products = [
     {
         id:1,
         name: "Agua",
@@ -76,7 +76,7 @@ const productos = [
 export default function fetchData() {
     return new Promise(resolve => {
         setTimeout(() => {
-            resolve(productos);
-        }, 300);
+            resolve(products);
+        }, 2000);
     });
 };
